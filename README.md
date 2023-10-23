@@ -5,7 +5,7 @@
     <picture>
       <img src="resources/logo.png" height="150">
     </picture>
-    <h1 align="center">Project name</h1>
+    <h1 align="center">Interactive graph on JSF</h1>
   </a>
 </p>
 
@@ -30,26 +30,8 @@
    <a aria-label="Repo size" href="https://github.com/worthant/labs-template-repository">
     <img alt="" src="https://img.shields.io/github/repo-size/worthant/labs-template-repository?style=for-the-badge&logo=github&labelColor=000000&color=008080">
   </a>
-  <a aria-label="Translation" href="./README_RU.md">
-    <img alt="" src="https://img.shields.io/badge/translation-RU-red?style=for-the-badge&labelColor=000000">
-  </a>
-  <a aria-label="Build Status" href="https://github.com/worthant/simple-one-page-website/actions">
-    <img alt="" src="https://img.shields.io/github/actions/workflow/status/worthant/simple-one-page-website/php.yaml?branch=main&style=for-the-badge&logo=github-actions&labelColor=000000">
-  </a>
-  <a aria-label="License" href="./LICENSE">
-    <img alt="" src="https://img.shields.io/github/license/worthant/labs-template-repository?style=for-the-badge&labelColor=000000">
-  </a>
-    <a aria-label="Vue.js version" href="https://vuejs.org/">
-    <img alt="" src="https://img.shields.io/badge/vue.js-v3.2.13-green.svg?style=for-the-badge&logo=vue.js&labelColor=000000">
-  </a>
-  <a aria-label="Vuetify Version" href="https://vuetifyjs.com/">
-    <img alt="" src="https://img.shields.io/badge/vuetify-v3.4.0-yellow.svg?style=for-the-badge&logo=vuetify&labelColor=000000">
-  </a>
   <a aria-label="Yarn version" href="https://yarnpkg.com/">
     <img alt="" src="https://img.shields.io/badge/yarn-v1.22.19-green.svg?style=for-the-badge&logo=yarn&labelColor=000000">
-  </a>
-  <a aria-label="Last commit" href="https://github.com/worthant/labs-template-repository/commits/main">
-    <img alt="" src="https://img.shields.io/github/last-commit/worthant/labs-template-repository?style=for-the-badge&logo=git&labelColor=000000">
   </a>
    <!-- New Badge for JavaServer Faces Framework -->
    <a aria-label="JavaServer Faces Framework" href="https://www.oracle.com/java/technologies/javaserverfaces.html">
@@ -59,33 +41,9 @@
    <a aria-label="Managed Beans" href="#">
       <img alt="" src="https://img.shields.io/badge/Managed_Beans-Supported-green?style=for-the-badge&logo=java&labelColor=000000&color=green">
    </a>
-   <!-- New Badge for Java EE -->
-   <a aria-label="Java EE" href="https://www.oracle.com/java/technologies/java-ee-glance.html">
-      <img alt="" src="https://img.shields.io/badge/Java_EE-8-purple?style=for-the-badge&logo=java&labelColor=000000&color=8B008B">
-   </a>
-   <!-- New Badge for Session-scoped Managed Bean -->
-   <a aria-label="Session-scoped Managed Bean" href="#">
-      <img alt="" src="https://img.shields.io/badge/Session_Scoped-Managed_Bean-yellow?style=for-the-badge&logo=java&labelColor=000000&color=yellow">
-   </a>
    <!-- New Badge for JDBC -->
    <a aria-label="JDBC" href="#">
       <img alt="" src="https://img.shields.io/badge/JDBC-Supported-red?style=for-the-badge&logo=java&labelColor=000000&color=red">
-   </a>
-   <!-- New Badge for Spring -->
-   <a aria-label="Spring" href="https://spring.io/">
-      <img alt="" src="https://img.shields.io/badge/Spring-2.5.5-brightgreen?style=for-the-badge&logo=spring&labelColor=000000&color=brightgreen">
-   </a>
-   <!-- New Badge for React -->
-   <a aria-label="React" href="https://reactjs.org/">
-      <img alt="" src="https://img.shields.io/badge/React-17.0.2-blue?style=for-the-badge&logo=react&labelColor=000000&color=blue">
-   </a>
-   <!-- New Badge for Redux -->
-   <a aria-label="Redux" href="https://redux.js.org/">
-      <img alt="" src="https://img.shields.io/badge/Redux-Supported-violet?style=for-the-badge&logo=redux&labelColor=000000&color=violet">
-   </a>
-   <!-- New Badge for Angular -->
-   <a aria-label="Angular" href="https://angular.io/">
-      <img alt="" src="https://img.shields.io/badge/Angular-12-red?style=for-the-badge&logo=angular&labelColor=000000&color=red">
    </a>
 </p>
 
