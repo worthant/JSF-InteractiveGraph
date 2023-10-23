@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:body>
+    <h:panelGroup layout="block" styleClass="githubIcon">
+        <h:outputLink value="https://github.com/worthant/simple-one-page-website" target="_blank">
+            <h:graphicImage value="resources/images/github.png" styleClass="h-7 ml-1.5 self-start"/>
+        </h:outputLink>
+    </h:panelGroup>
+    <h:outputText value="var 789 | Dvorkin Boris Alexandrovich | P3231" styleClass="text-center text-xs font-thin"/>
+    <h:panelGroup layout="block" id="date-time" styleClass="text-xs mr-2 self-end">
+        <h:outputText id="date"/>
+        <h:outputText value=", "/>
+        <h:outputText id="time"/>
+    </h:panelGroup>
+</h:body>
+</html>
