@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:body styleClass="rounded p-20 flex flex-col items-center justify-center backdrop-blur-md shadow-md max-h-[700px] col-start-3 col-span-2 row-start-2 row-span-2">
+    <h:form styleClass="flex flex-col gap-4">
+        <!-- X Slider -->
+        <h:panelGroup styleClass="flex flex-col gap-2">
+            <h:outputLabel for="xSlider" value="X:" />
+            <p:slider id="xSlider" minValue="-1" maxValue="5" step="0.1" />
+        </h:panelGroup>
+
+        <!-- Y Input -->
+        <h:panelGroup styleClass="flex flex-col gap-2">
+            <h:outputLabel for="yInput" value="Y:" />
+            <h:inputText id="yInput" maxlength="8" styleClass="border rounded px-2 py-1" placeholder="Y: (-3, 5)" />
+        </h:panelGroup>
+
+        <!-- R Slider -->
+        <h:panelGroup styleClass="flex flex-col gap-2">
+            <h:outputLabel for="rSlider" value="R:" />
+            <p:slider id="rSlider" minValue="1" maxValue="4" step="0.25" />
+        </h:panelGroup>
+
+        <!-- Submit Button -->
+        <h:commandButton value="Check" styleClass="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" />
+    </h:form>
+
+</h:body>
+</html>

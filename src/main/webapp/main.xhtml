@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <h:outputStylesheet library="styles" name="main.css"/>
+</h:head>
+
+<h:body>
+    <div class="font-sans bg-fixed bg-cover" style="background-image: url('resources/images/bg.png');">
+        <h:panelGroup layout="block" styleClass="h-11 rounded-lg grid grid-cols-3 items-center shadow-md backdrop-blur">
+            <ui:include src="header.xhtml"/>
+        </h:panelGroup>
+
+        <h:panelGroup layout="block" styleClass="grid grid-cols-[10%_1fr_1fr_10%] gap-5">
+            <ui:include src="graph.xhtml"/>
+            <!--            <ui:include src="inputForm.xhtml"/>-->
+            <!--            <ui:include src="resultsTable.xhtml"/>-->
+        </h:panelGroup>
+
+        <h:outputScript library="js" name="interactiveGraph.js" type="module"/>
+    </div>
+</h:body>
+</html>
