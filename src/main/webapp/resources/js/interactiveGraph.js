@@ -1,5 +1,9 @@
 "use strict"
 
+const canvas = document.getElementById("graphCanvas");
+const ctx = canvas.getContext("2d");
+let dynamicScalingFactor;
+
 document.addEventListener("DOMContentLoaded", () => {
     function updateDateTime() {
         const now = new Date();
@@ -12,12 +16,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.onload = function () {
+    setCanvasDPI();
     drawGraph(3);
 }
 
-const canvas = document.getElementById("graphCanvas");
-const ctx = canvas.getContext("2d");
-let dynamicScalingFactor;
+function setCanvasDPI() {
+    let dpi = window.devicePixelRatio;
+    let style = {
+        height() {
+            return +getComputedStyle(canvas).getPropertyValue('height').slice(0, -2);
+        },
+        width() {
+            return +getComputedStyle(canvas).getPropertyValue('width').slice(0, -2);
+        }
+    };
+
+    canvas.setAttribute('width', style.width() * dpi);
+    canvas.setAttribute('height', style.height() * dpi);
+}
 
 function drawGraph(R) {
     let width = canvas.width;
@@ -41,33 +57,33 @@ function drawGraph(R) {
 
     // Drawing the areas
 
-    // Triangle (lower left)
-    ctx.fillStyle = "#0000FF10"; // blue with 10% opacity
+    // Triangle (lower right)
+    ctx.fillStyle = "#FFFF0010"; // yellow with 10% opacity
     ctx.beginPath();
     ctx.moveTo(width / 2, height / 2);
+    ctx.lineTo(width / 2 + R / 2 * dynamicScalingFactor, height / 2);
     ctx.lineTo(width / 2, height / 2 + R * dynamicScalingFactor);
-    ctx.lineTo(width / 2 - R * dynamicScalingFactor, height / 2);
     ctx.closePath();
     ctx.fill();
-    ctx.strokeStyle = "#0000FF";
+    ctx.strokeStyle = "#FFFF00";
     ctx.stroke();
 
-    // Rectangle (lower right)
-    ctx.fillStyle = "#FFFF0010"; // yellow with 10% opacity
-    ctx.fillRect(width / 2, height / 2, R / 2 * dynamicScalingFactor, R * dynamicScalingFactor);
-    ctx.strokeStyle = "#FFFF00";
-    ctx.strokeRect(width / 2, height / 2, R / 2 * dynamicScalingFactor, R * dynamicScalingFactor);
+    // Rectangle (upper right)
+    ctx.fillStyle = "#0000FF10"; // blue with 10% opacity
+    ctx.fillRect(width / 2, height / 2 - R / 2 * dynamicScalingFactor, R * dynamicScalingFactor, R / 2 * dynamicScalingFactor);
+    ctx.strokeStyle = "#0000FF";
+    ctx.strokeRect(width / 2, height / 2 - R / 2 * dynamicScalingFactor, R * dynamicScalingFactor, R / 2 * dynamicScalingFactor);
 
-    // Semi-circle (upper left)
+    // Semi-circle (lower left)
     ctx.fillStyle = "#39FF1410"; // green with 10% opacity
     ctx.beginPath();
-    ctx.arc(width / 2, height / 2, R * dynamicScalingFactor, Math.PI, 1.5 * Math.PI);
-    ctx.lineTo(width / 2, height / 2);
+    ctx.arc(width / 2, height / 2, R / 2 * dynamicScalingFactor, 0, Math.PI);
+    ctx.lineTo(width / 2 - R / 2 * dynamicScalingFactor, height / 2);
     ctx.closePath();
     ctx.fill();
     ctx.strokeStyle = "#39FF14";
     ctx.beginPath();
-    ctx.arc(width / 2, height / 2, R * dynamicScalingFactor, Math.PI, 1.5 * Math.PI);
+    ctx.arc(width / 2, height / 2, R / 2 * dynamicScalingFactor, 0, Math.PI);
     ctx.stroke();
 
     // Draw labels
