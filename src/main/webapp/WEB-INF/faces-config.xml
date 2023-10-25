@@ -20,4 +20,40 @@
             <redirect/>
         </navigation-case>
     </navigation-rule>
+
+    <managed-bean>
+        <managed-bean-name>xBean</managed-bean-name>
+        <managed-bean-class>model.XBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>yBean</managed-bean-name>
+        <managed-bean-class>model.YBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>rBean</managed-bean-name>
+        <managed-bean-class>model.RBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>resultsControllerBean</managed-bean-name>
+        <managed-bean-class>model.ResultsControllerBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        <managed-property>
+            <property-name>xBean</property-name>
+            <value>#{xBean}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>yBean</property-name>
+            <value>#{yBean}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>rBean</property-name>
+            <value>#{rBean}</value>
+        </managed-property>
+    </managed-bean>
 </faces-config>

@@ -1,0 +1,7 @@
+<jboss-deployment-structure>
+    <deployment>
+        <dependencies>
+            <module name="org.eclipse.persistence" />
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>
