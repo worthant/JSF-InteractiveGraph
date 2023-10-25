@@ -6,31 +6,38 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:body>
-    <h:dataTable styleClass="resultTable" id="result" var="data" value="#{yourBean.dataList}">
-        <h:column>
-            <f:facet name="header">
-                <h:outputText value="x"/>
-            </f:facet>
-            <h:outputText value="#{data.x}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">
-                <h:outputText value="y"/>
-            </f:facet>
-            <h:outputText value="#{data.y}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">
-                <h:outputText value="r"/>
-            </f:facet>
-            <h:outputText value="#{data.r}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">
-                <h:outputText value="target hit or not"/>
-            </f:facet>
-            <h:outputText value="#{data.hit}"/>
-        </h:column>
-    </h:dataTable>
+    <div class="grid-cols-4 row-start-4 justify-center backdrop-blur-md shadow-md rounded-t-2xl">
+        <h:dataTable styleClass="w-full border-collapse" id="results-table" var="result" value="#{resultsControllerBean.results}">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="x" styleClass="text-center px-10 py-2"/>
+                </f:facet>
+                <h:outputText value="#{result.x}" styleClass="text-center px-10 py-2"/>
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="y" styleClass="text-center px-10 py-2"/>
+                </f:facet>
+                <h:outputText value="#{result.y}" styleClass="text-center px-10 py-2 border-l border-r"/>
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="r" styleClass="text-center px-10 py-2"/>
+                </f:facet>
+                <h:outputText value="#{result.r}" styleClass="text-center px-10 py-2 border-l border-r"/>
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="target hit or not" styleClass="text-center px-10 py-2"/>
+                </f:facet>
+                <h:outputText value="#{result.result ? 'In' : 'Out'}" styleClass="text-center px-10 py-2"/>
+            </h:column>
+
+        </h:dataTable>
+    </div>
 </h:body>
+
 </html>

@@ -6,12 +6,39 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>Index</title>
     <h:outputStylesheet library="styles" name="main.css"/>
+    <h:outputStylesheet>
+        .glow:hover {
+            box-shadow: 0 0 5px #9f7aea, 0 0 10px #9f7aea, 0 0 15px #9f7aea, 0 0 20px #9f7aea;
+        }
+    </h:outputStylesheet>
 </h:head>
-<h:body>
-    <h:form>
-        <h:commandButton value="Go to Main" action="goToMain"/>
-    </h:form>
-</h:body>
+<body>
+<div class="fixed" style="top: 44%; left:54.2%;">
+    <h:outputLink styleClass="bg-transparent hover:bg-purple-600 text-white px-4 h-104 w-16 rounded opacity-0 hover:opacity-80 hover:shadow-lg glow col-start-2 row-start-2 transform rotate-5 flex items-center justify-center" value="main.xhtml">
+        Go to Main
+    </h:outputLink>
+</div>
+<div class="font-sans min-h-screen bg-fixed bg-cover text-white p-3"
+     style="background-image: url('resources/images/portal.png');">
+    <h:panelGroup layout="block"
+                  styleClass="h-11 rounded-lg grid grid-cols-3 items-center shadow-md backdrop-blur border border-white">
+        <ui:include src="header.xhtml"/>
+    </h:panelGroup>
+</div>
+
+<!-- Your JS Script -->
+<h:outputScript>
+    document.addEventListener("DOMContentLoaded", () => {
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById("date").innerText = now.toDateString();
+            document.getElementById("time").innerText = now.toTimeString().substring(0, 8);
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 10000);
+    });
+</h:outputScript>
+</body>
 </html>
