@@ -6,13 +6,13 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:body>
-    <h:panelGroup layout="block" styleClass="githubIcon">
-        <h:outputLink value="https://github.com/worthant/simple-one-page-website" target="_blank">
-            <h:graphicImage value="resources/images/github.png" styleClass="h-7 ml-1.5 self-start"/>
+    <h:panelGroup layout="block" styleClass="githubIcon flex items-center">
+        <h:outputLink value="https://github.com/worthant/simple-one-page-website" target="_blank" styleClass="inline-block">
+            <h:graphicImage value="resources/images/github.png" styleClass="h-7 ml-2 self-start"/>
         </h:outputLink>
     </h:panelGroup>
-    <h:outputText value="var 789 | Dvorkin Boris Alexandrovich | P3231" styleClass="text-center text-xs font-thin"/>
-    <h:panelGroup layout="block" id="date-time" styleClass="text-xs mr-2 self-end">
+    <h:outputText value="var 789 | Dvorkin Boris Alexandrovich | P3231" styleClass="text-center text-base font-medium"/>
+    <h:panelGroup layout="block" id="date-time" styleClass="text-right text-base self-center self-end font-medium mr-2">
         <h:outputText id="date"/>
         <h:outputText value=", "/>
         <h:outputText id="time"/>
